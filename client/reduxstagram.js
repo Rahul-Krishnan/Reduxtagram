@@ -15,10 +15,10 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from './store';
 
-// import Raven from 'raven-js';
-// import { sentry_url } from './data/config';
-//
-// Raven.config(sentry_url).install();
+import Raven from 'raven-js';
+import { sentry_url } from './data/config';
+
+Raven.config('https://c12a62f0019644d799b85bfae97bcbae@sentry.io/212630').install();
 
 const router = (
   <Provider store={store}>
